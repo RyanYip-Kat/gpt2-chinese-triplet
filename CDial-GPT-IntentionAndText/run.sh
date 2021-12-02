@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=1 python train.py --model_checkpoint /path/huggingface-models/CDial-GPT_LCCC-large/ --pretrained --data_path intention_text_CDial-GPT.json --num_workers 1 --scheduler linear --device cuda --gpt2 --max_length 72
+python infer.py --gpt2 --datapath  intention_text_CDial-GPT.json --out_path sentence_intention_test.txt --model_checkpoint runs/Dec01_09-07-12_98cad14aa202/ --device cuda --max_length 64
